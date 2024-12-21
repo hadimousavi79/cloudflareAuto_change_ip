@@ -20,75 +20,62 @@ curl -Ls https://raw.githubusercontent.com/Free-Guy-IR/cloudflareAuto_change_ip/
 
 
 وقتی نصب تمام شد:
-باید دستورات زیر رو بزنید 
 
-```bash
-cd cloudflareAuto_change_ip
-
-nano cloudflareAuto_change_ip.py
-```
-وقتی فایل  باز شد باید بخش های زیر رو جایگزین کنید 
-
-در قسمت ** api_cloudflare ** باید  Global API Key	 اکانت کلودفلرتون رو قرار بدید.
-
+اولین سوال :
+باید تعداد دامنه هاتون رو مشخص کنید  مثلا اگر دو دامنه دارید عدد 2 را وارد کنید 
 
 ```
-API_TOKEN = 'api_cloudflare' 
-```
-در  domain_zone_id  هم وقتی وارد دامنه میشید در بخش  Overview
- قسمت api نوشته Zone ID
-  باید Zone ID هر دامنه  رو جایگزین کنیدش .
+How many domains (zones) do you have? 
 
 ```
-ZONE_IDS = [
-    'ZONE_IDS1',
-    'ZONE_IDS2'
-]'
+Zon ID  دامنه هارو باید وارد کنید
+```
+Enter the Zone ID for domain 1: 
+```
+```
+Enter the Zone ID for domain 2:
+```
+تعداد سرور های بکاپتون رو باید وارد کنید
+```
+How many servers do you have? 
+```
+آیپی سرور هارو باید به ترتیب وارد کنید 
+```
+Enter the IP of server 1: 
+```
+بعد وارد کردن آیپی باید پورت TCP   اون سرور رو وارد کنید ( حتما پورت تانل شده باشه که اگه تانل حتی قطع شد  برنامه  بتونه بفهمه )
+```
+Enter the TCP port for server 1: 
+```
+
+اولیت سرور رو مشخص کنید (1 بیشترین اولیت   و هر عدد بعد 1 به ترتیب اولیت بندی میشه )
+
+```
+Enter the priority for server 1 (1 = highest priority): 
+```
+Global API token اکانت کلودفلرتون رو باید وارد کنید ( از بخش پروفایل)
+```
+Enter your Cloudflare Global API token: 
+```
+توکن ربات تلگرام باید وارد کنید
+```
+Enter your Telegram bot token:
+```
+چت آیدی  اکانت تلگرام که قراره اطلاع رسانی به ایشون ارسال بشه
+``` 
+Enter your Telegram chat ID: 
+```
+مقدار زمان انتظار برای برسی دوباره سرور ها ( ثانیه )
+```
+Enter the interval for checking servers (in seconds, default 120): 
+
 ```
 
 
 
-------
-
-در بخش :
-```
-ADDRESSES = [
-    (8587, 'ip_server_iran1'),
-    (8586, 'ip_server_iran2'),
-    (8585, 'ip_server_iran3'),
-    (8584, 'ip_server_iran4'),
-    (8583, 'ip_server_iran5'),
-    (8582, 'ip_server_iran6'),
-    (8581, 'ip_server_iran7'),
-]
-```
- باید آیپی سرور های ایرانتون رو همراه با پورت های تانلتون رو 
- قرار بدید 
-
- ** پورت ها حتما باید روی سرورها باز باشن **
 
 
-------
-
-در بخش :
-```
-TELEGRAM_TOKEN = 'token_telegram'
-CHAT_ID = 'admin_id'
-```
-
-باید اطلاعات ربات تلگرام و آیدی عددی اکانت تلگرامتون که  ربات لاگ هارو براتون بفرسته رو باید قرار بدید 
-
-داخل فایل 
-```
-time.sleep(120)
-```
-زمان هر برسیو نشون میده که اینجا 120 ثانیه هستش میتونید هر بخش کد این مورد رو دید تغییر بدید البته من پیشنهاد نمیکنم .
-
-
----------
-
-وقتی  تغییرات انجام دادید فایل رو ذخیره کنید و دستورات زیر رو وارد کنید
-
+وقتی  تغییرات انجام دادید  یک بار برنامه متوقف کنید و با  روش زیر اجرا کنید تا متوقف نشه
 ```
 screen
 
