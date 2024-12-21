@@ -13,7 +13,7 @@ if [ -d "cloudflareAuto_change_ip" ]; then
     git pull
 else
     echo "Cloning the GitHub repository..."
-    git clone https://github.com/mohammadahadpour/cloudflareAuto_change_ip.git
+    
     cd cloudflareAuto_change_ip
 fi
 
