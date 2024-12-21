@@ -36,3 +36,7 @@ curl -L -o cloudflareAuto_change_ip.py https://raw.githubusercontent.com/Free-Gu
 echo "Ready to configure the script. Press Enter to start..."
 read -p "Press Enter to continue..." temp
 python3 cloudflareAuto_change_ip.py || { echo "Python script failed. Please check for issues."; exit 1; }
+
+# نمایش پیغام به کاربر
+echo "Installation and initial configuration complete."
+echo "You can run the script anytime using: python3 cloudflareAuto_change_ip.py"
