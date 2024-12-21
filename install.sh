@@ -22,7 +22,7 @@ echo "Creating requirements.txt..."
 echo "requests" > requirements.txt
 echo "aiohttp" >> requirements.txt
 echo "ping3" >> requirements.txt
-
+echo "python-dotenv" >> requirements.txt
 
 # نصب کتابخانه‌های Python
 echo "Installing Python dependencies..."
@@ -33,9 +33,6 @@ echo "Downloading cloudflareAuto_change_ip.py..."
 curl -L -o cloudflareAuto_change_ip.py https://raw.githubusercontent.com/Free-Guy-IR/cloudflareAuto_change_ip/main/cloudflareAuto_change_ip.py
 
 # اجرای برنامه برای وارد کردن اطلاعات اولیه
-echo "Running the script to collect user information..."
+echo "Ready to configure the script. Press Enter to start..."
+read -p "Press Enter to continue..." temp
 python3 cloudflareAuto_change_ip.py || { echo "Python script failed. Please check for issues."; exit 1; }
-
-# نمایش پیغام به کاربر
-echo "Installation and initial configuration complete."
-echo "You can run the script anytime using: python3 cloudflareAuto_change_ip.py"
