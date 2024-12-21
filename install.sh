@@ -34,7 +34,7 @@ curl -L -o cloudflareAuto_change_ip.py https://raw.githubusercontent.com/mohamma
 
 # اجرای برنامه برای وارد کردن اطلاعات اولیه
 echo "Running the script to collect user information..."
-python3 cloudflareAuto_change_ip.py
+python3 cloudflareAuto_change_ip.py || { echo "Python script failed. Please check for issues."; exit 1; }
 
 # نمایش پیغام به کاربر
 echo "Installation and initial configuration complete."
