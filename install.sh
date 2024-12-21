@@ -13,7 +13,7 @@ if [ -d "cloudflareAuto_change_ip" ]; then
     git pull
 else
     echo "Cloning the GitHub repository..."
-    
+    git clone https://github.com/Free-Guy-IR/cloudflareAuto_change_ip.git
     cd cloudflareAuto_change_ip
 fi
 
@@ -30,7 +30,7 @@ pip3 install -r requirements.txt
 
 # دانلود فایل cloudflareAuto_change_ip.py
 echo "Downloading cloudflareAuto_change_ip.py..."
-curl -L -o cloudflareAuto_change_ip.py https://raw.githubusercontent.com/mohammadahadpour/cloudflareAuto_change_ip/main/cloudflareAuto_change_ip.py
+curl -L -o cloudflareAuto_change_ip.py https://raw.githubusercontent.com/Free-Guy-IR/cloudflareAuto_change_ip/main/cloudflareAuto_change_ip.py
 
 # اجرای برنامه برای وارد کردن اطلاعات اولیه
 echo "Running the script to collect user information..."
