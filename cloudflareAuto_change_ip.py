@@ -7,9 +7,11 @@ from ping3 import ping
 from dotenv import load_dotenv
 
 
+import os
+
 def initialize_env():
-    if not os.path.exists('.env'):
-        print("No .env file found. Let's create one...")
+    if not os.path.exists('.env') or os.path.getsize('.env') == 0:
+        print("No valid .env file found. Let's create one...")
         with open('.env', 'w') as env_file:
             num_zones = int(input("How many domains (zones) do you have? "))
             for i in range(1, num_zones + 1):
@@ -37,6 +39,7 @@ def initialize_env():
             interval = input("Enter the interval for checking servers (in seconds, default 120): ")
             env_file.write(f"INTERVAL={interval or 120}\n")
         print(".env file created successfully.")
+
 
 # Check and initialize .env file
 initialize_env()
