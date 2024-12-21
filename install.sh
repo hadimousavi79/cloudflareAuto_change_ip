@@ -22,7 +22,7 @@ echo "Creating requirements.txt..."
 echo "requests" > requirements.txt
 echo "aiohttp" >> requirements.txt
 echo "ping3" >> requirements.txt
-echo "python-dotenv" >> requirements.txt
+
 
 # نصب کتابخانه‌های Python
 echo "Installing Python dependencies..."
